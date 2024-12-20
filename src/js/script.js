@@ -1,5 +1,5 @@
 
-const number = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'];
+const number = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
 const faces = ["♥", "♦", "♠", "♣"];
 
 
@@ -19,13 +19,13 @@ function generateRandomCard() {
     const numberGenerator = randomElement(number);
 
 
-    numup.innerText = randomElement(numberGenerator);
+    numup.textContent = numberGenerator;
     face.innerText = randomElement(faces);
-    numdown.innerText = randomElement(numberGenerator);
+    numdown.textContent = numberGenerator;
 
 
 
-    if (randomElement(faces) === "♥" || randomElement(faces) === "♦") {
+    if (randomElement(faces) === '♥' || randomElement(faces) === '♦') {
 
         numup.style.color = 'red';
         face.style.color = 'red';
