@@ -17,19 +17,25 @@ function generateRandomCard() {
 
     //to generate random number and assign it to the top and bottom
     const numberGenerator = randomElement(number);
+    const faceGenerator = randomElement(faces)
 
 
     numup.textContent = numberGenerator;
-    face.innerText = randomElement(faces);
+    face.textContent = faceGenerator;
     numdown.textContent = numberGenerator;
 
 
 
-    if (randomElement(faces) === '♥' || randomElement(faces) === '♦') {
+    if (faceGenerator === "♥" || faceGenerator === "♦") {
 
         numup.style.color = 'red';
         face.style.color = 'red';
         numdown.style.color = 'red';
+    }
+    else {
+        numup.style.color = 'black';
+        face.style.color = 'black';
+        numdown.style.color = 'black';
     }
 
 
